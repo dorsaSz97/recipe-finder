@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="styles/index.scss" /> -->
+
+    <!-- Custom JS -->
+    <!-- <script defer type="module" src="js/index.js"></script> -->
+    <title>Recipe app</title>
+  </head>
+
+  <body>
+    <div class="main-content">
+      <header class="header">
+        <h1 class="logo">2Cook</h1>
+        
+        <form action="#" method="get" class="search">
+          <input
+            type="text"
+            placeholder="Search recipes..."
+            class="search__field"
+          />
+          <!-- ? maybe create a search button to grow and make the entire field white after clicking the field? -->
+        </form>
+
+        <div class="groceries">
+          <img
+            src="assets/img/shopping-cart.svg"
+            alt="shopping cart"
+            class="icon groceries__icon"
+          />
+          <div class="groceries__container"></div>
+        </d>
+      </header>
+
+      <main>
+        <nav class="nav" data-current-page="browse">
+          <ul class="nav__list">
+            <li class="nav__link link--browse">
+              <img src="assets/img/search.svg" alt="magnifying glass" /> Browse
+            </li>
+            <li class="nav__link link--bookmarks">
+              <img src="assets/img/heart-filled.svg" alt="heart" />
+              Favorites
+            </li>
+            <li class="nav__link link--mealplan">
+              <img src="assets/img/calender.svg" alt="calender" /> Weekly
+              Plan
+            </li>
+          </ul>
+        </nav>
+
+        <section class="main-container">
+          <div class="weekdays"></div>
+
+          <div class="recipes"></div>
+
+          <div class="pagination"></div>
+        </section>
+      </main>
+
+      <div class="recipe-window"></div>
+    </div>
+  </body>
+</html>

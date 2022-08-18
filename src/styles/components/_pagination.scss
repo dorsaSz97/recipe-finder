@@ -1,0 +1,25 @@
+@use '../abstracts' as *;
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+
+  > span {
+    width: 7%;
+    text-align: center;
+  }
+
+  &__btn {
+    width: 10%;
+    padding: rem(15) rem(8);
+    border-radius: 1000px;
+    color: white;
+    background-color: #1ba65a;
+
+    &[data-goto=''] {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}

@@ -1,0 +1,134 @@
+@use '../abstracts' as *;
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: #001100;
+  line-height: 1;
+  background-color: #779d7b;
+  overflow: hidden;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 95%;
+  padding: rem(30) rem(40) rem(20);
+  border-radius: rem(15);
+  background-color: lighten(#eff5f0, 0.6);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  padding-bottom: rem(16);
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+    position: relative;
+    width: 80%;
+    padding-top: rem(50);
+
+    .weekdays {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding-inline: rem(15);
+
+      &__btn {
+        width: rem(120);
+        height: rem(60);
+        padding: rem(10);
+        border-radius: rem(15);
+        background-color: #1ba65a;
+        color: white;
+        transition: all 0.5s;
+
+        &.active {
+          background-color: black;
+        }
+      }
+    }
+
+    .weekly-meals-container {
+      display: flex;
+      gap: rem(30);
+      width: 100%;
+      padding: rem(10);
+      padding-top: rem(20);
+
+      .meal-type {
+        > p {
+          font-weight: 500;
+          padding-left: rem(15);
+          text-decoration: underline;
+        }
+        flex: 1;
+        &__list {
+          display: flex;
+          flex-direction: column;
+          gap: rem(10);
+          width: 100%;
+          margin-top: rem(20);
+          overflow-y: scroll;
+        }
+      }
+    }
+
+    .recipes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: rem(20);
+
+      .message {
+        margin: auto;
+      }
+
+      .recipe {
+        flex: 100%;
+        display: flex;
+        align-items: center;
+        max-width: rem(310);
+        cursor: pointer;
+
+        &__name {
+          display: flex;
+          align-items: center;
+          width: rem(180);
+          max-width: 23ch;
+          min-height: 60%;
+          margin-left: rem(-20);
+          padding-block: rem(18);
+          padding-right: rem(15);
+          padding-left: rem(40);
+          border-radius: rem(15);
+          box-shadow: 0 0 15px #0000002b;
+          color: #001100;
+          font-weight: 400;
+          line-height: 1.3;
+          background-color: #fff;
+        }
+
+        &__image {
+          z-index: 3;
+          img {
+            width: rem(125);
+            height: rem(125);
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+    }
+  }
+}
