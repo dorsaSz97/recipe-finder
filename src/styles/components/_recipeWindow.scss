@@ -73,12 +73,12 @@
       margin-bottom: rem(96);
       font-size: rem(17);
       color: #2f2f2f;
+      overflow-y: scroll;
 
       .ingredient {
         display: flex;
         align-items: center;
         max-height: 50%;
-        overflow-y: scroll;
 
         > * {
           cursor: pointer;
@@ -152,10 +152,11 @@
           font-size: rem(45);
           line-height: 1.2;
           color: #001100;
-          img {
-            width: 25px;
-            height: 25px;
-          }
+        }
+        img {
+          width: 25px;
+          height: 25px;
+          cursor: pointer;
         }
       }
     }

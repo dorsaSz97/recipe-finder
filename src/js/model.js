@@ -1,9 +1,5 @@
 import { API_URL, PER_PAGE } from './config.js';
 
-// TODO: create svg sprite
-// TODO: everything in webpack
-// TODO: backdrop for the recipe view
-
 export const state = {
   currRecipe: {},
   search: {
@@ -20,7 +16,8 @@ export const state = {
 export const getSearchResults = async function (query) {
   try {
     const res = await fetch(`${API_URL}search.php?s=${query}`);
-    const data = await res.json(); //{melas:[]}
+    const data = await res.json(); //{meals:[]}
+    console.log(data);
 
     if (data.meals === null) throw new Error('Something wrong with fetching');
 
