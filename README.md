@@ -1,4 +1,4 @@
-# Recipe Finder
+# Recipe Finder (not responsive)
 
 This is a Recipe application coded with JavaScript (+modules) using MVC pattern. (bundled using wepack)
 
