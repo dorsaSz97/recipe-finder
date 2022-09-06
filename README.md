@@ -25,7 +25,7 @@ npm start
 Create the public folder (all bundled up):
 
 ```bash
-npm build
+npm run build
 ```
 
 ## Built with
