@@ -97,6 +97,7 @@ const controlSearchResults = async function () {
     // 4) Render pagination buttons
     paginationView.render(model.state.search);
   } catch (err) {
+    resultsView.renderMessage('Nothing found');
     console.error(err);
   }
 };
